@@ -17,7 +17,9 @@
                 <textarea name="content" id="editor"> <?php echo $content; ?> </textarea>
                 <script>
                     ClassicEditor
-                        .create( document.querySelector( '#editor' ))
+                        .create( document.querySelector( '#editor' ), {
+                            language: {ui:'ko', content: 'ko'}
+                        })
                         .catch( error => {
                             console.log( error );
                         } );
